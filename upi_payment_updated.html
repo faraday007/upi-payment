@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UPI Payment ₹1</title>
+<style>
+body{
+font-family:Arial,sans-serif;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+margin:0;
+background:#f4f4f4;
+}
+.card{
+background:white;
+padding:30px;
+border-radius:12px;
+box-shadow:0 2px 10px rgba(0,0,0,0.1);
+text-align:center;
+}
+button{
+background:#4CAF50;
+color:#fff;
+border:none;
+padding:15px 30px;
+font-size:18px;
+border-radius:8px;
+cursor:pointer;
+}
+</style>
+</head>
+<body>
+<div class="card">
+<h2>Pay ₹1</h2>
+<p>UPI ID: 9695343266@ybl</p>
+<button onclick="payNow()">Pay Now</button>
+</div>
+
+<script>
+function payNow() {
+    const upiIntent =
+    "upi://pay?pa=9695343266@ybl&pn=Archit%20Mishra&am=1&cu=INR";
+    window.location.href = upiIntent;
+}
+</script>
+</body>
+</html>
